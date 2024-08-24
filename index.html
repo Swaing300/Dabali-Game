@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: azure;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .class1{
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(27, 54, 54);
+
+        }
+        .class2{
+            height: 20vh;
+            width: 100vw;
+            background-color: rgb(27, 54, 54);
+            display: flex;
+            justify-content:space-around;
+            
+
+        }
+        .innerclass{
+            height: 90%;
+            width: 90%;
+            background-color: rgb(75, 157, 212);
+            border-radius: 10px;
+            border: 5px;
+            border-color: aliceblue;
+            
+        }
+        .innerclass1{
+            height: 100%;
+            width: 70%;
+            background-color: rgb(27, 54, 54);
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .innerclass2{
+            height: 100%;
+            width: 30%; 
+            background-color: rgb(27, 54, 54);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .part1{
+            height: 15ch;
+            width: 15ch;
+            border: solid 1px red;
+            border-radius: 10px;
+            background: url("OIP.jpg");
+            background-size: cover;
+
+        }
+        .part2{
+            height: 15ch;
+            width: 15ch;
+            border: solid 1px red;
+            border-radius: 10px;
+            background: url("OIP.jpg");
+            background-size: cover;
+        }
+        .part3{
+            height: 15ch;
+            width: 15ch;
+            border: solid 1px red;
+            border-radius: 10px;
+            background: url("OIP.jpg");
+            background-size: cover;
+        }
+        
+        button{
+            height: 5ch;
+            width: 10ch;
+            color: rgb(202, 237, 242);
+            background-color: rgb(173, 18, 31);
+            border-radius: 10px;
+        }
+        .in-1{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 10px;
+        }
+        .in-2{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        #pack{
+            height: 30ch;
+            width: 50ch;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .a1{
+            background: url("Chudia.jpg")70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .a2{
+            background: url("Munda.jpg")70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .a3{
+            background: url("Kalia.jpg")70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .a4{
+            background: url("Thikiri.jpg")70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .a5{
+            background: url("Bana.jpg")70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .a6{
+            background: url("Nalia.jpg")70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        @media only screen and (max-width: 700px) {
+            .part1{
+                height: 10ch;
+                width: 10ch;
+            }
+            .part2{
+                height: 10ch;
+                width: 10ch;
+            }
+            .part3{
+                height: 10ch;
+                width: 10ch;
+            }
+            .a1{
+                background: url("Chudia.jpg")6px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .a2{
+                background: url("Munda.jpg")6px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .a3{
+                background: url("Kalia.jpg")6px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .a4{
+                background: url("Thikiri.jpg")6px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            
+            }
+            .a5{
+                background: url("Bana.jpg")6px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            
+            }
+            .a6{
+                background: url("Nalia.jpg")6px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="class1">
+        <div class="innerclass">
+            <div class="in-1">
+                <div class="a1" id="pack"></div>
+                <div class="a2" id="pack"></div>
+                <div class="a3" id="pack"></div>
+            </div>
+            <div class="in-2">
+                <div class="a4" id="pack"></div>
+                <div class="a5" id="pack"></div>
+                <div class="a6" id="pack"></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="class2">
+        <div class="innerclass1">
+            <div class="part1" id="part1"></div>
+            <div class="part2" id="part2"></div>
+            <div class="part3" id="part3"></div>
+        </div>
+        <div class="innerclass2">
+            <button id="roll">ROLL</button>
+        </div>
+        
+    </div>    
+    <script>
+        document.getElementById("roll").onclick=function(){
+            document.getElementById("part1").style.background="url("+swingF()+")";
+            document.getElementById("part1").style.backgroundSize="cover";
+            document.getElementById("part2").style.background="url("+swingF()+")";
+            document.getElementById("part2").style.backgroundSize="cover";
+            document.getElementById("part3").style.background="url("+swingF()+")";
+            document.getElementById("part3").style.backgroundSize="cover";
+            setTimeout(function(){
+                location = ''
+            },6000)
+        }
+        function swingF(){
+            let a=Math.floor(Math.random() * 6) + 1;
+            switch (a) {
+                case 1:
+                    return "Chudia.jpg";
+                case 2:
+                    return "Munda.jpg";
+                case 3:
+                    return "Kalia.jpg";
+                case 4:
+                    return "Thikiri.jpg";
+                case 5:
+                    return "Bana.jpg";
+                case 6:
+                    return "Nalia.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
